@@ -1,0 +1,3 @@
+-- Plant Box tables. Runs on every start, so always use CREATE TABLE IF NOT EXISTS.
+-- Money is stored in fils (1 BHD = 1000 fils) as an INTEGER, never as a float.
+-- No tables yet: add them here when a task needs one.
