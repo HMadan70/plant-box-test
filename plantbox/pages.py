@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, jsonify, render_template
+
+from plantbox.plans import PLANS
 
 pages = Blueprint("pages", __name__)
 
@@ -11,3 +13,9 @@ def home():
 @pages.route("/box")
 def box():
     return render_template("box.html")
+
+
+@pages.get("/box/plans.json")
+def plans_json():
+    """The mobile app reads the plans from here."""
+    return jsonify(PLANS)
