@@ -8,6 +8,6 @@ def home():
     return render_template("home.html")
 
 
-@pages.route("/box/")         
+@pages.route("/box")
 def box():
     return render_template("box.html")
